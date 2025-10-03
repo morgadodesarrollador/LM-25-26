@@ -46,7 +46,11 @@ header nav {
     text-align: center;
     padding: 10px;
     border: 1px solid red;
-
+    display: flex;
+    flex-direction: row; /* dirección de los elementos hijos */
+    flex-wrap: nowrap; /* todos los hijo en una SOLA LINEA */
+    justify-content: space-around;
+    align-items: center; /* alineación vertical de los elementos hijos */
 }
 header nav a {
     color: yellow;

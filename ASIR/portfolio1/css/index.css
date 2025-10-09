@@ -67,14 +67,39 @@ header nav a:hover {
 main {
     height: 78vh;
     background-color: lightgrey;
+    /* contenedor flexible */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+ /* hijos --> items */
+main nav {
+    border: 1px solid black;
+    flex-basis: 10%;
+    background-color: grey;
+}
+main section {
+    border: 1px solid black;
+    flex-basis: 70%;
+    background-color: aqua;
+}
+main aside{
+    border: 1px solid black;
+    flex-basis: 20%;
+    background-color: burlywood;
 }
 
-main p {
-    background-color: red;
-    margin: 10px;
-}
+
 
 footer {
     height: 10vh;
     background-color: gray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+footer div {
+    flex-basis: 50%;
+    border: 1px solid red;
 }

@@ -24,7 +24,7 @@ header {
     display: flex;
     flex-direction: row; /* dirección de los elementos hijos */
     flex-wrap: nowrap; /* todos los hijo en una SOLA LINEA */
-    justify-content: space-between; /* distribución horizontal de los elementos hijos */
+    justify-content: space-between /* distribución horizontal de los elementos hijos */
 }
 
 header figure {
@@ -39,8 +39,16 @@ header h1 {
     color: white;
     text-align: center;
     border: 5px solid red;
-
- 
+    display: flex;
+    /* op 2 */
+    flex-direction: column;
+    justify-content: center;
+    /* op1
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items:flex-end; 
+    */
 }
 header nav {
     text-align: center;
@@ -71,6 +79,22 @@ header nav a:hover {
 main {
     height: 78vh;
     background-color: lightgrey;
+    display: flex;
+    flex-direction: row; /* dirección de los elementos hijos */
+}
+main nav{
+    border:2px solid black;
+    flex-basis: 20%;
+}
+
+main section {
+    border:2px solid black;
+    flex-basis: 60%;
+}
+
+main aside{
+    border:2px solid black;
+    flex-basis: 20%;
 }
 
 footer {

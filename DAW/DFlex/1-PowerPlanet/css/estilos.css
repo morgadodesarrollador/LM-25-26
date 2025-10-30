@@ -5,6 +5,7 @@
 }
 
 body {
+    /* medida fija/absoluta --> px */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,7 +13,9 @@ body {
 }
 
 header {
-    flex-basis: 5%;
+    /* altura/anchura relativa % */
+    /* flex-basis: 5%; */ /* relativo */
+    height: 5vh; /* altura fija/absoluta adapta viewport */
     background-color: black;
     display: flex;
     flex-direction: row;
@@ -30,8 +33,30 @@ header #buscar {
     background-color: blue;
 }
 header figure {
+    flex-basis: 10%; /* WIDTH */
+    height: 100%;
+}
+header figure img{
+    height: 100%; /* 70% de la height del padre */
+}
+header form{
+    flex-basis: 20%; /* WIDTH */
+    height: 100%;
     background-color: red;
-    flex-basis: 10%;
+    display: flex;
+    flex-direction: column; /* eje principal columna */
+    justify-content: center; /* alineacion en eje principal */
+    align-items: center; /* alineacion en eje secunfdario */
+}
+
+header form input{
+    flex-basis: 50%; /* height */
+    width: 80%;
+    border-radius: 20px;
+    font-size: 20px;
+    color: blue;
+    background-color: bisque;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 header #enlaces {
     background-color: yellow;

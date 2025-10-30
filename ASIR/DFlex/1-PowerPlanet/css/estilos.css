@@ -9,7 +9,7 @@ body{
     flex-direction: column;
     flex-wrap: nowrap;
     /* el alto seria la suma de los altos de los hijos */
-    height: 100vh; /* altura fija de la ventana del navegador */
+    height: 300vh; /* altura fija de la ventana del navegador */
 
 }
 
@@ -93,14 +93,40 @@ header #carrito i{
     font-size: 25px;
     color: green;
 }
+/*
+---elementos de linea: img, a, span, i input
+---elemetnos de bloques: el resto de etiquetas de este codigo
+*/
 main{
-    background-color: brown;
+    background-color: white;
     flex-basis: 65%;
     /* height: 75vh; */
 }
-
+main section{ /* contenedor  */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main section article{ /* item */
+    flex-basis: 20%; /* W/H segun el fleex-direction del padre */
+    border: 1px solid black;
+    display: flex; /* contenedor */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;   
+}
+main section article p{
+    color: red
+}
+main section article figure{
+    height: 150px;
+}
+main section article figure img{
+    height: 100%;
+}
 footer{
-    background-color: yellow;
+    background-color: black;
     flex-basis: 30%;
     /* height: 20vh; */
     display: flex;
@@ -120,7 +146,7 @@ footer nav#sociales{
     align-items: center;
     padding-left: 30px;
 }
-footer nav#sociales a {
+footer nav#sociales a { /* estado reposo fotograma */
     text-decoration: none;
     border: 0px solid black; 
     background-color: lightgreen;
@@ -137,12 +163,13 @@ footer nav#sociales a {
     justify-content: center;
     align-items: center;
     
-    transition: transform 0.3s ease-in-out;
-
+    transition: transform 0.3s ease-in-out; 
 }
-
+/* estado sobre (fotograma) */
 footer nav#sociales a:hover {
+    /* fecto de transformacion */
     transform: translate(0px, -10px);
+    transform: rotate(360deg);
 }
 /* footer nav#sociales a:nth-child(1) {
     margin-left: 30px;
@@ -159,8 +186,36 @@ footer div#subscribete{
 footer article {
     border: 1px solid black;
     flex-basis: 33%;
+    padding-top: 20px;
+}
+footer article h3 {
+    color: whitesmoke;
+    text-transform: uppercase;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+footer article nav{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+footer article nav a{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    height: 30px;
+    align-items: center;
+    text-decoration: none;
+    color: whitesmoke;
+}
+footer article nav a i{
+    font-size: 25px;
+    margin-right: 10px;
 }
 
-
-
+footer article nav a span {
+    font-size: 18px;
+}
 

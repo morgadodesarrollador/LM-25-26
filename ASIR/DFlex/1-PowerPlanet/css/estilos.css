@@ -84,7 +84,7 @@ header #carrito{
     color: white;
     flex-basis: 10%; 
     display: flex;
-    flex-direction: row-reverse; /* ejej principal */
+    flex-direction: row; /* ejej principal */
     flex-wrap: nowrap;   
     justify-content: space-around; /* alineacion en eje principal */
     align-items: center; /* alineacion en eje secundario */

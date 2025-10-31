@@ -69,4 +69,53 @@ main {
 footer {
     flex-basis: 30%;
     background-color: black;
+    display: flex;
+    flex-direction: row;
+    /* todos los hijos (items) en una sola linea */
+    /*flex-wrap: nowrap;*/
+    /* todos los hijos (items) en varias lineas en funccion flexbasic */
+    flex-wrap: wrap;
+}
+footer nav#sociales {
+    background-color: red;
+    flex-basis: 50%; /* height (columno) / width (row) */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-left: 30px;
+}
+footer nav#sociales a{
+    text-decoration: none;
+    border: 0px solid black; 
+    background-color: lightgreen;
+    /* elemento en linea pero con propiedades de bloque */
+    display: inline-block;
+    
+    width: 50px;
+    height: 50px;
+    border-radius:50px;
+    margin-right: 7px;;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer nav#sociales a i {
+    font-size: 30px;
+    color: white;
+}
+    
+footer div#subscribete{
+    background-color: burlywood;
+    flex-basis: 50%;
+    
+}
+
+footer article{
+    background-color: cadetblue;
+    flex-basis: 33%;
 }

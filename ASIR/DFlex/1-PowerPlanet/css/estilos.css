@@ -70,6 +70,7 @@ header nav{
     align-items: center; /* alineacion en eje secundario */
 }
 header nav a{
+    display: none;
     color: white;
     text-decoration: none;
     font-size: 18px;

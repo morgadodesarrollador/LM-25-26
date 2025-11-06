@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+  <style>
+    body { font-family: Arial; background: #f5f5f5; }
+    .contenedor { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 20px; }
+    .producto {
+      background: white; border-radius: 10px; padding: 15px; width: 220px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center;
+      transition: transform 0.2s;
+    }
+    .producto:hover { transform: translateY(-5px); }
+    img { width: 100%; border-radius: 8px; }
+    h3 { font-size: 15px; color: #333; margin: 10px 0; }
+    .precio { font-size: 18px; font-weight: bold; color: #333; }
+    .descuento { color: #e63e6f; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">Catálogo de Productos</h1>
+  <div id="listaProductos" class="contenedor">
+    
+  </div>
+
+  <script>
+    fetch('data/productos.json')
+      .then(response => response.json())
+      .then(productos => {
+        const contenedor = document.getElementById('listaProductos');
+        productos.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'producto';
+          card.innerHTML = `
+            <img src="${p.imagen}" alt="${p.nombre}">
+            <h3>${p.nombre}</h3>
+            <div class="precio">${p.precio.toFixed(2)}€</div>
+            <div class="descuento">-${p.descuento}%</div>
+          `;
+          contenedor.appendChild(card);
+        });
+      })
+      .catch(error => console.error('Error al cargar productos:', error));
+  </script>
+</body>
+</html>

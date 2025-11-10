@@ -196,9 +196,11 @@ main section article p .opiniones{
     color: green;
 }
 main section article div {
+    margin: 5px 0px 5px 0px;
+    border: 0px solid red;
     display: flex;
     flex-direction: row;
-    justify-content: space-around  ;
+    justify-content: space-between  ;
     align-items: center;
     width: 100%;
 }

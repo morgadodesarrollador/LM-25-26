@@ -1,0 +1,16 @@
+
+  {
+    "id": 2,
+    "nombre": "iPhone 16 5G 128GB Azul",
+    "precio": 799.00,
+    "precioOriginal": 959.00,
+    "descuento": 17,
+    "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/1085/10855024/117-apple-iphone-16-128gb-azul-ultramar-caracteristicas.jpg",
+    "valoracion": 2,
+    "opiniones": 34,
+    "caracteristicas": {
+      "cpu": "Apple A18 Bionic",
+      "ram": "8 GB",
+      "disco": "128 GB"
+    }
+  }

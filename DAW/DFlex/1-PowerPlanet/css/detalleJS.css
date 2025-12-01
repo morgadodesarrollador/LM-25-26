@@ -219,10 +219,6 @@ main article#caracteristicas .valoraciones .star i{
     /* color: yellow;
     font-size: 10px; */
 }
-main article#caracteristicas .descuento {
-    color: red;
-    font-size: 20px;
-}
 
 main article#caracteristicas .price-section {
     display: flex;

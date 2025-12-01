@@ -51,10 +51,11 @@
                 <div class="badge-friday">FRESH FRIDAY</div>
                 <div class="badge-envio">Envío gratis</div>
             </div>
-            <img src="https://www.powerplanetonline.com/cdnassets/cubot_kingkong_x_12gb_512gb_negro_01_l.jpg" alt="Cubot KingKong X">
+            <img  id="foto"
+                  src="https://www.powerplanetonline.com/cdnassets/cubot_kingkong_x_12gb_512gb_negro_01_l.jpg" alt="Cubot KingKong X">
         </figure>
         <article id="caracteristicas">
-            <h1 id="title">Cubot KingKong X 16GB/256GB Negro</h1>
+            <h1 id="nombre">Cubot KingKong X 16GB/256GB Negro</h1>
             <div class="valoraciones">
                 <span class="star">
                     <i class="fa-solid fa-star"></i>
@@ -66,7 +67,7 @@
                 <span class="comentarios">(3 opiniones)</span>
             </div>
             <div class="price-section">
-                <span class="descuento">-35%</span>
+                <span id="dto" class="descuento">-35%</span>
                 <span class="pvr">284,99€</span>
             </div>
             <div>
@@ -92,3 +93,23 @@
     </main>
 </body>
 
+<script>
+    
+
+     fetch('./data/producto.json')
+        .then(response => response.json())
+        .then ( producto => {
+            console.log("-1->",producto)
+            console.log("-2->", producto.nombre, producto.precio)
+           
+           
+            // aActualiza nombre
+            document.getElementById('nombre').textContent = producto.nombre;
+            document.getElementById('dto').textContent = `- ${producto.descuento}  %`;
+            
+            //cambiar portada
+            document.getElementById('foto').setAttribute("src", producto.imagen);
+        })
+
+       
+</script>

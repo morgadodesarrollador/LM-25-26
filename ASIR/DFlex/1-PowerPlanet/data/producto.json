@@ -1,15 +1,22 @@
 {
-    "id": 8,
-    "nombre": "MacBook Air M2",
-    "precio": 1199.00,
-    "precioOriginal": 1299.00,
-    "descuento": 8,
-    "imagen": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format&fit=crop",
-    "valoracion": 4.9,
-    "opiniones": 210,
+    "id": 2,
+    "nombre": "iPhone 16 5G 128GB Azul",
+    "precio": 799.00,
+    "precioOriginal": 959.00,
+    "descuento": 17,
+    "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/1085/10855024/117-apple-iphone-16-128gb-azul-ultramar-caracteristicas.jpg",
+    "valoracion": 2,
+    "opiniones": 34,
     "caracteristicas": {
-      "cpu": "Apple M2",
+      "cpu": "Apple A18 Bionic",
       "ram": "8 GB",
-      "disco": "512 GB SSD"
-    }
+      "disco": "128 GB"
+    },
+    "galeria": [
+      "https://www.powerplanetonline.com/cdnassets/apple_iphone_16_azul_01_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/apple_iphone_16_azul_02_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/apple_iphone_16_azul_03_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/apple_iphone_16_azul_04_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/apple_iphone_16_azul_05_ad_l.jpg"
+    ]
   }

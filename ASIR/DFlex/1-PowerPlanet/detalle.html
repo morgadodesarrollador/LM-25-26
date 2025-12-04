@@ -51,10 +51,10 @@
                 <div class="badge-friday">FRESH FRIDAY</div>
                 <div class="badge-envio">Envío gratis</div>
             </div>
-            <img src="https://www.powerplanetonline.com/cdnassets/cubot_kingkong_x_12gb_512gb_negro_01_l.jpg" alt="Cubot KingKong X">
+            <img id="product_foto" src="https://www.powerplanetonline.com/cdnassets/cubot_kingkong_x_12gb_512gb_negro_01_l.jpg" alt="Cubot KingKong X">
         </figure>
         <article id="caracteristicas">
-            <h1 class="title">Cubot KingKong X 16GB/256GB Negro</h1>
+            <h1 id="product_nombre" class="title">Cubot KingKong X 16GB/256GB Negro</h1>
             <div class="valoraciones">
                 <span class="star">
                     <i class="fa-solid fa-star"></i>
@@ -63,15 +63,15 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </span>
-                <span class="nvaloraciones">5</span>
-                <span class="comentarios">(3 opiniones)</span>
+                <span id="product_nvaloraciones" class="nvaloraciones">5</span>
+                <span id="product_comentarios" class="comentarios">(3 opiniones)</span>
             </div>
             <div class="price-section">
-                <span class="discount-badge">-35%</span>
-                <span class="current-price">284,99€</span>
+                <span id="product_descuento" class="discount-badge">-35%</span>
+                <span id="product_pvo" class="current-price">284,99€</span>
             </div>
             <div>
-                <p class="recommended-price">Precio recomendado: 439,00€</p>
+                <p id="product_pvp" class="recommended-price">Precio recomendado: 439,00€</p>
                 <p style="color: #999; font-size: 13px;">Los precios incluyen IVA</p>
             </div>
 
@@ -90,3 +90,31 @@
         </article>
     </main>
 </body>
+<script>
+    // 1-. Obtener los parametros de la URL
+    const urlParmans = new URLSearchParams(window.location.search);
+    // 2-. Obtener el parametro 'id'
+    const idProd = parseInt(urlParmans.get('codigo'))
+    //comprobar que el id llega al detalle.html a traves de la URL
+    console.log ("--->", idProd)
+    fetch('./data/productos.json')
+        .then(response => response.json())
+        .then (productos => {
+            //console.log("--1--",producto)
+            //console.log("--2--",producto.nombre)
+
+            const producto = productos.find(p => p.id === idProd);
+
+            document.getElementById('product_nombre').textContent = producto.nombre;
+            document.getElementById('product_nvaloraciones').textContent=producto.valoracion;
+            document.getElementById('product_comentarios').textContent=`( ${producto.opiniones}  opiniones )`;
+            document.getElementById('product_descuento').textContent=`- ${producto.descuento}  % `;
+
+            document.getElementById('product_pvo').textContent=`${producto.precio} € `;
+            document.getElementById('product_pvp').textContent=`Precio Recomendado: ${producto.precioOriginal} €  `;
+
+            document.getElementById('product_foto').setAttribute("src", producto.imagen)
+
+            
+        })
+</script>

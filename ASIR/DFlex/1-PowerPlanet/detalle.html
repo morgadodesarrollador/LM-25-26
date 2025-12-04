@@ -33,7 +33,7 @@
             <a href=#>
                 <i class="fa-solid fa-house"></i>
             </a> &gt;  
-            <a href="#">Smartphones</a> &gt;
+            <a href="http://127.0.0.1:5501/ASIR/DFlex/1-PowerPlanet/index.html">Smartphones</a> &gt;
             <a href="#">Moviles</a> &gt;
             <a href="#">One Plus 13</a>
         </nav>
@@ -97,24 +97,23 @@
     const idProd = parseInt(urlParmans.get('codigo'))
     //comprobar que el id llega al detalle.html a traves de la URL
     console.log ("--->", idProd)
-    fetch('./data/productos.json')
+    //leemos el array json de productos y devolvemos el producto cuya id = = idProd
+    const producto = await fetch('./data/productos.json')
         .then(response => response.json())
         .then (productos => {
-            //console.log("--1--",producto)
-            //console.log("--2--",producto.nombre)
+             producto = productos.find(p => p.id === idProd);
+             return producto;
+        }); //cierro el fetch
+   
+    console.log ("-->", producto)
+    document.getElementById('product_nombre').textContent = producto.nombre;
+    document.getElementById('product_nvaloraciones').textContent=producto.valoracion;
+    document.getElementById('product_comentarios').textContent=`( ${producto.opiniones}  opiniones )`;
+    document.getElementById('product_descuento').textContent=`- ${producto.descuento}  % `;
 
-            const producto = productos.find(p => p.id === idProd);
+    document.getElementById('product_pvo').textContent=`${producto.precio} € `;
+    document.getElementById('product_pvp').textContent=`Precio Recomendado: ${producto.precioOriginal} €  `;
 
-            document.getElementById('product_nombre').textContent = producto.nombre;
-            document.getElementById('product_nvaloraciones').textContent=producto.valoracion;
-            document.getElementById('product_comentarios').textContent=`( ${producto.opiniones}  opiniones )`;
-            document.getElementById('product_descuento').textContent=`- ${producto.descuento}  % `;
-
-            document.getElementById('product_pvo').textContent=`${producto.precio} € `;
-            document.getElementById('product_pvp').textContent=`Precio Recomendado: ${producto.precioOriginal} €  `;
-
-            document.getElementById('product_foto').setAttribute("src", producto.imagen)
-
-            
-        })
+    document.getElementById('product_foto').setAttribute("src", producto.imagen)
+    
 </script>

@@ -39,11 +39,6 @@
         </nav>
        
         <figure id="thumbnails">
-            <img src="https://www.powerplanetonline.com/cdnassets/cubot_kingkong_x_12gb_512gb_negro_01_l.jpg" alt="Vista 1">
-            <img src="https://www.powerplanetonline.com/cdnassets/cubot_kingkong_x_12gb_256gb_negro_02_ad_l.jpg" alt="Vista 2">
-            <img src="https://www.powerplanetonline.com/cdnassets/cubot_kingkong_x_12gb_256gb_negro_03_ad_l.jpg" alt="Vista 3">
-            <img src="https://www.powerplanetonline.com/cdnassets/cubot_kingkong_x_12gb_256gb_negro_04_ad_l.jpg" alt="Vista 4">
-            <img src="https://www.powerplanetonline.com/cdnassets/cubot_kingkong_x_12gb_256gb_negro_05_ad_l.jpg" alt="Vista 4">
             
         </figure>
         <figure id="portada">
@@ -95,19 +90,20 @@
 
 <script>
     
-
-    // 1-. Obtener los parametros de la URL
+    //1-. *** Obtener el id del producto en la URL ******
+      // a-. Obtener los parametros de la URL
     const urlParmans = new URLSearchParams(window.location.search);
-    // 2-. Obtener el parametro 'id'
+      // b-. Obtener el parametro 'id'
     const idProd = parseInt(urlParmans.get('id'))
-    //comprobar que el id llega al detalle.html a traves de la URL
+      // c-. comprobar que el id llega al detalle.html a traves de la URL
     console.log ("--->", idProd)
 
-     fetch('./data/productos.json')
+    //2-. **** Obtener el objeto producto del array productos.json que tenga ese id
+    fetch('./data/productos.json')
         .then(response => response.json())
         .then ( productos => {
-            //buscar producto en array productos
-            const producto = productos.find(p => p.id === idProd)
+            //buscar producto en array productos. select * from productos where p.id == $idProd (url)
+            const producto = productos.find(prod => prod.id === idProd);
             
             console.log("-1->",producto)
             console.log("-2->", producto.nombre, producto.precio)

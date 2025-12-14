@@ -70,14 +70,22 @@
     "precio": 89.99,
     "precioOriginal": 119.99,
     "descuento": 25,
-    "imagen": "https://images.unsplash.com/photo-1606811841036-d8c7a9c5d3f3?w=500&auto=format&fit=crop",
+    "imagen": "https://www.powerplanetonline.com/cdnassets/Huawei-Watch-Fit-4-Blanco--FreeBuds-SE-2-Blanco-001_l.jpg",
     "valoracion": 4.6,
     "opiniones": 54,
     "caracteristicas": {
       "cpu": "HiSilicon Kirin A1",
       "ram": "128 MB",
       "disco": "4 GB"
-    }
+    },
+    "galeria": [
+      "https://www.powerplanetonline.com/cdnassets/Huawei-Watch-Fit-4-Negro--FreeBuds-SE-2-Blanco-002_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/Huawei-Watch-Fit-4-Negro--FreeBuds-SE-2-Blanco-003_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/Huawei-Watch-Fit-4-Negro--FreeBuds-SE-2-Blanco-004_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/Huawei-Watch-Fit-4-Negro--FreeBuds-SE-2-Blanco-004_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/Huawei-Watch-Fit-4-negro-006_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/Huawei-Watch-Fit-4-negro-007_ad_l.jpg"
+    ]
   },
   {
     "id": 5,

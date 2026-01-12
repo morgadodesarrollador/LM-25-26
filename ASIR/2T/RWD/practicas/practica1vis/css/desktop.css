@@ -2,6 +2,9 @@ header {
     flex-wrap: wrap;
 }
 
+header figure{
+    display: block;
+}
 header h1{
     flex-basis: 100%;
     order: 1;

@@ -48,3 +48,25 @@ header button{
     border-radius: 5px;
     cursor: pointer;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main nav {
+    background-color: antiquewhite;
+    flex-basis: 20%;
+}
+main section {
+    background-color: cadetblue;
+    flex-basis: 50%;
+}
+main aside {
+    background-color: cornflowerblue;
+    flex-basis: 30%;
+}
+main footer {
+    background-color: grey;
+}

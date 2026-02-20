@@ -26,3 +26,23 @@ header button{
     flex-basis: 15%;
     order: 1;
 }
+
+main {
+    flex-wrap: wrap;
+}
+
+main nav {
+    flex-basis: 100%;
+    width: 20%;
+    order:1
+}
+main section {
+    flex-basis: 70%;
+    width: 80%;
+    order:3;
+}
+main aside {
+    flex-basis: 30%;
+    width: 80%;
+    order:2;
+}

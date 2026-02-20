@@ -3,7 +3,7 @@ header {
 }
 
 header figure{
-    display: block;
+    display: none;
 }
 header h1{
     flex-basis: 100%;
@@ -20,4 +20,17 @@ header nav{
 header button{
     flex-basis: 10%;
     order: 2;
+}
+
+main nav {
+
+}
+
+main  section {
+    flex-basis: 100%;
+    width: 50%;
+}
+main  aside {
+    flex-basis: 100%;
+     width: 30%;
 }

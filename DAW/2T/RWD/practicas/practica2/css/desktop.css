@@ -12,7 +12,7 @@ header h1 {
 }
 
 header figure {
-    display: block;
+    display: none;
 }
 header nav{
     flex-basis: 50%;
@@ -22,4 +22,17 @@ header nav{
 header button{
     flex-basis: 15%;
     order: 2;
+}
+
+main nav {
+    flex-basis: 100%;
+    width: 20%;
+}
+main section {
+    flex-basis: 100%;
+    width: 50%;
+}
+main aside {
+    flex-basis: 100%;
+    width: 30%;
 }

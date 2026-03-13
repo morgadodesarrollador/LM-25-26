@@ -1,18 +1,20 @@
 
+import './Header.css'
+
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 // navigation es un array JS [] de objetos {}, --> Array JSON
-const navigation = [
+const opciones = [
   { 
-    name: 'Quien Somos', 
-    href: '#', 
+    name: 'Quienes Somos', 
+    href: '#qsomos', 
     current: false 
   },
-  { name: 'Trabajos', href: '#', current: false },
-  { name: 'Servicios', href: '#', current: true },
-  { name: 'Contacto', href: '#', current: false },
-  { name: 'Productos', href: '#', current: false },
+  { name: 'Trabajos', href: '#trabajos', current: false },
+  { name: 'Formaciones', href: '#formaciones', current: true },
+  { name: 'Servicios', href: '#servicios', current: false },
+  { name: 'Productos', href: 'https://www.pccomponentes.com/', current: false },
   { name: 'Categorias', href: '#', current: false },
 ]
 
@@ -25,7 +27,7 @@ function Header() {
 
     return ( 
         // codigo html con componenetes de Tailwind + etiquetas html + codigo TS
-        <Disclosure as="nav" className="relative bg-gray-800">
+        <Disclosure as="header" className="fixed top-0 w-full bg-gray-800">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -37,31 +39,32 @@ function Header() {
                     <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
                     </DisclosureButton>
                 </div>
-                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div id="p0" className="flex flex-1 items-center justify-start sm:items-stretch sm:justify-start">
                     <div className="flex shrink-0 items-center">
-                    <img
-                        alt="Your Company"
-                        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                        className="h-8 w-auto"
-                    />
+                        <img
+                            alt="Your Company"
+                            src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                            className="h-8 w-auto"
+                        />
                     </div>
-                    <div className="hidden sm:ml-6 sm:block">
-                    <div className="flex space-x-4">
-                        { 
-                            navigation.map((item) => (
-                                <a
-                                    key={item.name}
-                                    href={item.href}
-                                    aria-current={item.current ? 'page' : undefined}
-                                    className={classNames(
-                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
-                                    'rounded-md px-3 py-2 text-sm font-medium',
-                                    )}
-                                >
-                                    {item.name}
-                                </a>
-                        ))}
-                    </div>
+                    <div id="p1" className="hidden w-[80%] sm:ml-6 sm:block ">
+                        <nav id="nav-ppal" className="flex space-x-4">
+                            { 
+                                opciones.map((item) => (
+                                    <a
+                                        key={item.name}
+                                        href={item.href}
+                                        aria-current={item.current ? 'page' : undefined}
+                                        className={classNames(
+                                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
+                                        'rounded-md px-3 py-2 text-sm font-medium',
+                                        )}
+                                    >
+                                        {item.name}
+                                    </a>
+                            ))
+                            }
+                        </nav>
                     </div>
                 </div>
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -119,7 +122,15 @@ function Header() {
                                 href="#"
                                 className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
                             >
-                                Sign out
+                                Salir  
+                            </a>
+                        </MenuItem>
+                        <MenuItem>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
+                            >
+                                Registro  
                             </a>
                         </MenuItem>
                     </MenuItems>
@@ -130,18 +141,18 @@ function Header() {
 
             <DisclosurePanel className="sm:hidden">
                 <div className="space-y-1 px-2 pt-2 pb-3">
-                {navigation.map((item) => (
+                {opciones.map((item) => (
                     <DisclosureButton
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    aria-current={item.current ? 'page' : undefined}
-                    className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
-                        'block rounded-md px-3 py-2 text-base font-medium',
-                    )}
-                    >
-                    {item.name}
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        aria-current={item.current ? 'page' : undefined}
+                        className={classNames(
+                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white',
+                            'block rounded-md px-3 py-2 text-base font-medium',
+                        )}
+                        >
+                        {item.name}
                     </DisclosureButton>
                 ))}
                 </div>

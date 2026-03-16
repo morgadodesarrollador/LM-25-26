@@ -79,7 +79,7 @@ const Formacion = () => {
                     </div>
                     <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-700 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                     {formacion.map((titulo) => (
-                        <article key={titulo.id} 
+                      <article key={titulo.id} 
                                  className="flex max-w-xl flex-col items-start justify-between
                                             rounded-md border-2 border-indigo-500/100 p-3 hover:bg-red-100">
                         <div className="flex items-center gap-x-4 text-xs">

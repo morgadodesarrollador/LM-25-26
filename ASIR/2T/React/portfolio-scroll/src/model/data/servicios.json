@@ -39,5 +39,13 @@
         "descripcion": "La administración de Kubernetes implica la gestión y orquestación de contenedores en un clúster de Kubernetes. Esto incluye la implementación de aplicaciones, la escalabilidad de los servicios, la gestión del almacenamiento y la configuración de redes. Kubernetes es una plataforma de código abierto que permite a los desarrolladores y operadores automatizar el despliegue, la operación y la escalabilidad de aplicaciones en contenedores.",
         "imagen": "https://cdn.adrformacion.com/teleusers/vid_presentacion_cursos/courseImage_KUBERNETES_1707826504_.jpg",
         "tecnologias": ["DevOps", "Kubernetes", "Jenkins"]
+    },
+    {
+        "id": 56,
+        "titulo": "Programación de Microservicios con NestJS",
+        "categoria": "microservicios, NestJS",
+        "descripcion": "La administración de Kubernetes implica la gestión y orquestación de contenedores en un clúster de Kubernetes. Esto incluye la implementación de aplicaciones, la escalabilidad de los servicios, la gestión del almacenamiento y la configuración de redes. Kubernetes es una plataforma de código abierto que permite a los desarrolladores y operadores automatizar el despliegue, la operación y la escalabilidad de aplicaciones en contenedores.",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/37/NestJS-logo-wordmark.svg",
+        "tecnologias": ["DevOps", "Kubernetes", "Jenkins"]
     }
 ]

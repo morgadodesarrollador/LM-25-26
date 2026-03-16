@@ -17,6 +17,7 @@ import {
 export const ServicioCard = ({ servicio }: Props) => {
   //responsabilidad: mostrar en una Card la información de un servicio concreto
   return (
+    
     <Card className="relative mx-auto w-full max-w-sm pt-0">
       <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
       <img
@@ -30,8 +31,7 @@ export const ServicioCard = ({ servicio }: Props) => {
         </CardAction>
         <CardTitle>{servicio.titulo}</CardTitle>
         <CardDescription>
-          A practical talk on component APIs, accessibility, and shipping
-          faster.
+          {servicio.descripcion1}
         </CardDescription>
       </CardHeader>
       <CardFooter>

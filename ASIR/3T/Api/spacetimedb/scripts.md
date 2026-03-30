@@ -11,3 +11,4 @@ kubectl delete ns spacetimedb
 helm install spacetimedb . -n spacetimedb --create-namespace -f values.yaml
 kubectl get pods -n spacetimedb -w
 kubectl logs -n spacetimedb spacetimedb-749dccb7b9-k24lm
+kubectl exec -it spacetimedb-749dccb7b9-8t295 -n spacetimedb -- bash

@@ -8,6 +8,14 @@ service:
   type: ClusterIP
   port: 3000
 
+ingress:
+  enabled: true
+  className: traefik
+  host: spacetimedb.jamorgado.es
+  tls: true
+  tlsSecret: spacetimedb-tls
+  clusterIssuer: letsencrypt-prod
+  
 persistence:
   enabled: true
   size: 2Gi

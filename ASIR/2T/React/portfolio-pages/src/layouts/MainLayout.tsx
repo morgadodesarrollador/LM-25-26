@@ -1,19 +1,20 @@
-import { NavBar } from '../components/NavBar'
+import { NavBar } from '@/components/main/NavBar'
 import { Outlet } from 'react-router-dom'
 
 export const MainLayout = () => {
   return (
     <>
-        <header>
-            <NavBar />
-        </header>
-        <main>
-            {/* El componente Outlet es un componente de React Router que se utiliza para renderizar los componentes hijos de una ruta. En este caso, el componente Outlet se utiliza para renderizar los componentes Home, Trabajos y Contacto, dependiendo de la ruta que se haya seleccionado en el NavBar. */}
-            <Outlet />
-        </main>
-        <footer>
-            Este es el pie de página de mi portfolio
-        </footer>
+        <div className="min-h-screen w-full bg-slate-900 text-white">
+            <header className="w-full bg-slate-950/80 backdrop-blur z-50">
+                <NavBar />
+            </header>
+            <main  className="flex-1 min-h-150 items-center container mx-auto px-4 py-8">
+                <Outlet />
+            </main>
+            <footer className="fixed bottom-0 w-full bg-slate-950/80 backdrop-blur z-50 h-30">
+                Este es el pie de página de mi portfolio
+            </footer>
+        </div>
     
     </>
   )

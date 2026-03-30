@@ -1,6 +1,6 @@
 
 export const Trabajos = () => {
   return (
-    <h1>Pagina principal Trabajos</h1>
+    <h1 className="py-32">Pagina principal Trabajos</h1>
   )
 }

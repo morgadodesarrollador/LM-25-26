@@ -1,8 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { MainLayout } from "../layouts/MainLayout"
+import { MainLayout } from "@/layouts/MainLayout"
 import { Home } from "../pages/Home"
-import { Trabajos } from "../pages/Trabajos"
-import { Contacto } from "../pages/Contacto"
+import { Trabajos } from "@/pages/Trabajos"
+import { Contacto } from "@/pages/Contacto"
+import Servicios from "@/pages/servicios/Servicios"
+import { ServicioDetalle } from "@/pages/servicios/ServicioDetalle"
 
 export const AppRouter = () => {
   return (
@@ -12,6 +14,8 @@ export const AppRouter = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/trabajos" element={<Trabajos />} />
                 <Route path="/contacto" element={<Contacto />} />
+                <Route path="/servicios" element={<Servicios />} />
+                <Route path="/servicios/:id" element={<ServicioDetalle />} />
             </Route>
         </Routes>
     </BrowserRouter>

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spacetimedb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spacetimedb
+  template:
+    metadata:
+      labels:
+        app: spacetimedb
+    spec:
+      containers:
+        - name: spacetimedb
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/spacetimedb
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: spacetimedb-pvc

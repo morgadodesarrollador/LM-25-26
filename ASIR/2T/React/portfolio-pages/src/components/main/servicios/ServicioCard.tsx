@@ -30,9 +30,6 @@ export const ServicioCard = ({ servicio }: Props) => {
           <Badge variant="secondary">Featured</Badge>
         </CardAction>
         <CardTitle>{servicio.titulo}</CardTitle>
-        <CardDescription>
-          {servicio.descripcion}
-        </CardDescription>
       </CardHeader>
       <CardFooter>
         <Button className="w-full">View Event</Button>

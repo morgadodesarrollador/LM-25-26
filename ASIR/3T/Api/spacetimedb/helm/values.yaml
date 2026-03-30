@@ -1,0 +1,13 @@
+image:
+  repository: clockworklabs/spacetime
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 3000
+
+persistence:
+  enabled: true
+  size: 2Gi
+
+  # docker run --rm --pull always -p 3000:3000 clockworklabs/spacetime start

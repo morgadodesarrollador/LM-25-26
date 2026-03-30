@@ -2,8 +2,8 @@ FROM ubuntu:22.04
 
 RUN apt update && apt install -y curl ca-certificates
 
-# Descargar binario directamente (sin script interactivo)
-RUN curl -L https://github.com/clockworklabs/SpacetimeDB/releases/latest/download/spacetime-linux-x86_64 \
+# Descargar correctamente desde release API
+RUN curl -L https://github.com/clockworklabs/SpacetimeDB/releases/latest/download/spacetime-linux-amd64 \
     -o /usr/local/bin/spacetime && \
     chmod +x /usr/local/bin/spacetime
 

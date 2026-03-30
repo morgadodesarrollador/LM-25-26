@@ -1,8 +1,8 @@
 image:
   # repository: clockworklabs/spacetime
-  repository: morgadoberruezo/spacetimedb:latest
-
+  repository: morgadoberruezo/spacetimedb
   tag: latest
+  pullPolicy: Always
 
 service:
   type: ClusterIP

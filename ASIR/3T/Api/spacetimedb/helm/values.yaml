@@ -1,5 +1,7 @@
 image:
-  repository: clockworklabs/spacetime
+  # repository: clockworklabs/spacetime
+  repository: morgadoberruezo/spacetimedb:latest
+
   tag: latest
 
 service:

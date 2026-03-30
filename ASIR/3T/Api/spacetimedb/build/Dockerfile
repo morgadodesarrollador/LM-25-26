@@ -10,7 +10,7 @@ RUN curl -L https://github.com/clockworklabs/SpacetimeDB/releases/latest/downloa
 
 WORKDIR /data
 
-RUN COPY ./start.sh /root/start.sh
+COPY ./start.sh /root/start.sh
 RUN chmod +x /root/start.sh
 EXPOSE 3000
 

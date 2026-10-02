@@ -1,0 +1,65 @@
+/* 
+    Regla css , estructura
+
+    selector {
+        propiedad1: valor1;
+        propiedad2: valor2;
+        ...
+        propiedadN: valorN;
+    }
+
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+}
+body {
+    background-color: lightgrey;
+}
+header{ /* selector de etiqueta */
+    background-color:darkcyan;
+    border: 0px solid black;
+    text-align: center;
+    color: white;
+    height: 150px;
+}
+
+header h1 { /* selector descendente */
+    border: 0px solid black;
+    padding: 10px;
+}
+header nav {
+    margin-top: 20px;
+    /* text-align: left; */
+    padding: 10px;
+    border: 2px solid black;
+    /* aplico display flex al CONTENEDOR para ALINEAR los elementos hijos (a) en una fila 
+    */
+    display: flex; /* contenedor flexible */
+    flex-direction:row; /* el eje principal es horizontal */
+    justify-content: space-around; /* la alineacion de los hijos en el eje principal */
+}
+header nav a {  
+    /* display: block; */
+    border: 1px solid red;
+    /* margin: 5px; */
+    /* display: inline-block; */
+}
+
+main {
+    
+}
+main section{
+    margin-top: 10px;
+    border: 1px solid grey;
+    height: 400px;
+    background-color: white;
+}

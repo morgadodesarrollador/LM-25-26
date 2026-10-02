@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guía didáctica de escapadas por Almería creada con los principales elementos de HTML5.">
+  <title>Descubre Almería | Guía de escapadas</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c4a6e'/%3E%3Cpath d='M8 45 24 21l10 14 7-9 15 19Z' fill='%237dd3fc'/%3E%3Ccircle cx='47' cy='16' r='7' fill='%23fbbf24'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="cabecera" id="inicio">
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a class="marca" href="#inicio" aria-label="Descubre Almería, volver al inicio">
+        <span aria-hidden="true">☀</span> Descubre Almería
+      </a>
+      <ul>
+        <li><a href="#destinos">Destinos</a></li>
+        <li><a href="#ruta">Ruta</a></li>
+        <li><a href="#comparativa">Comparativa</a></li>
+        <li><a href="#reserva">Reserva</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="hero-texto">
+        <p class="etiqueta">Mar, desierto y pueblos blancos</p>
+        <h1 id="titulo-principal">Tres paisajes.<br>Una provincia inolvidable.</h1>
+        <p class="introduccion">Una pequeña guía para descubrir algunos de los rincones más singulares de Almería durante un fin de semana.</p>
+        <div class="acciones">
+          <a class="boton boton-principal" href="#destinos">Explorar destinos</a>
+          <a class="boton boton-secundario" href="#reserva">Planificar visita</a>
+        </div>
+      </div>
+      <figure class="hero-imagen">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85" alt="Paisaje mediterráneo entre montañas al atardecer" width="1400" height="933">
+        <figcaption>La luz del Mediterráneo acompaña todo el recorrido.</figcaption>
+      </figure>
+    </section>
+  </header>
+
+  <main id="contenido">
+    <section class="seccion" id="destinos" aria-labelledby="titulo-destinos">
+      <div class="encabezado-seccion">
+        <p class="etiqueta">Lugares esenciales</p>
+        <h2 id="titulo-destinos">Elige tu próxima parada</h2>
+        <p>Cada destino ofrece una experiencia diferente: costa, paisaje volcánico o historia.</p>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <span class="numero">01</span>
+          <h3>Cabo de Gata</h3>
+          <p>Calas transparentes, senderos volcánicos y pequeñas localidades junto al mar.</p>
+          <a href="https://www.juntadeandalucia.es/medioambiente/portal/areas-tematicas/espacios-protegidos" target="_blank" rel="noopener noreferrer">Información del parque <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="tarjeta destacada">
+          <span class="numero">02</span>
+          <h3>Desierto de Tabernas</h3>
+          <p>Un paisaje árido único en Europa, modelado por cárcavas, ramblas y siglos de erosión.</p>
+          <a href="#ruta">Incluir en la ruta <span aria-hidden="true">↓</span></a>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">03</span>
+          <h3>Mojácar</h3>
+          <p>Calles estrechas, casas encaladas y miradores abiertos a la sierra y al Mediterráneo.</p>
+          <a href="#comparativa">Consultar detalles <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="franja" id="ruta" aria-labelledby="titulo-ruta">
+      <div>
+        <p class="etiqueta clara">Propuesta de viaje</p>
+        <h2 id="titulo-ruta">Una ruta de tres días</h2>
+        <p>Una planificación sencilla para combinar naturaleza, cultura y gastronomía sin prisas.</p>
+      </div>
+
+      <ol class="itinerario">
+        <li>
+          <strong>Día 1 · Costa</strong>
+          <span>San José, playa de Mónsul y mirador de las Sirenas.</span>
+        </li>
+        <li>
+          <strong>Día 2 · Interior</strong>
+          <span>Desierto de Tabernas y paseo por el casco histórico de Almería.</span>
+        </li>
+        <li>
+          <strong>Día 3 · Levante</strong>
+          <span>Mojácar Pueblo, Garrucha y atardecer en San Juan de los Terreros.</span>
+        </li>
+      </ol>
+
+      <aside class="consejo">
+        <h3>Antes de salir</h3>
+        <ul>
+          <li>Lleva agua, protección solar y calzado cómodo.</li>
+          <li>Consulta la previsión meteorológica y el estado de los senderos.</li>
+          <li>Respeta las zonas protegidas y recoge todos tus residuos.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="seccion" id="comparativa" aria-labelledby="titulo-tabla">
+      <div class="encabezado-seccion">
+        <p class="etiqueta">Decide de un vistazo</p>
+        <h2 id="titulo-tabla">Comparativa de destinos</h2>
+        <p>Datos orientativos para elegir la excursión que mejor encaja contigo.</p>
+      </div>
+
+      <div class="tabla-contenedor" tabindex="0" aria-label="Tabla desplazable horizontalmente">
+        <table>
+          <caption>Características de cuatro destinos de la provincia de Almería</caption>
+          <thead>
+            <tr>
+              <th scope="col">Destino</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Duración recomendada</th>
+              <th scope="col">Dificultad</th>
+              <th scope="col">Mejor época</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Cabo de Gata</th>
+              <td>Costa y senderismo</td>
+              <td>1–2 días</td>
+              <td><span class="nivel facil">Fácil</span></td>
+              <td>Primavera y otoño</td>
+            </tr>
+            <tr>
+              <th scope="row">Tabernas</th>
+              <td>Paisaje desértico</td>
+              <td>Medio día</td>
+              <td><span class="nivel media">Media</span></td>
+              <td>Otoño e invierno</td>
+            </tr>
+            <tr>
+              <th scope="row">Mojácar</th>
+              <td>Cultura y costa</td>
+              <td>1 día</td>
+              <td><span class="nivel facil">Fácil</span></td>
+              <td>Todo el año</td>
+            </tr>
+            <tr>
+              <th scope="row">Los Vélez</th>
+              <td>Sierra y patrimonio</td>
+              <td>1 día</td>
+              <td><span class="nivel media">Media</span></td>
+              <td>Primavera</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="testimonio" aria-label="Testimonio de una viajera">
+      <blockquote>
+        “Almería sorprende porque el paisaje cambia por completo en apenas unos kilómetros.”
+      </blockquote>
+      <p>— Laura, viajera local</p>
+    </section>
+
+    <section class="seccion reserva" id="reserva" aria-labelledby="titulo-formulario">
+      <div class="reserva-info">
+        <p class="etiqueta">Prepara tu escapada</p>
+        <h2 id="titulo-formulario">Cuéntanos qué buscas</h2>
+        <p>Completa el formulario y recibirás una propuesta orientativa para organizar tu visita.</p>
+
+        <dl>
+          <div><dt>Respuesta</dt><dd>En menos de 48 horas</dd></div>
+          <div><dt>Coste</dt><dd>Consulta gratuita</dd></div>
+          <div><dt>Formato</dt><dd>Propuesta por correo</dd></div>
+        </dl>
+      </div>
+
+      <form id="formulario-viaje">
+        <div class="campo-doble">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" autocomplete="email" placeholder="nombre@ejemplo.com" required>
+          </div>
+        </div>
+
+        <div class="campo-doble">
+          <div class="campo">
+            <label for="fecha">Fecha aproximada</label>
+            <input type="date" id="fecha" name="fecha">
+          </div>
+          <div class="campo">
+            <label for="personas">Número de personas</label>
+            <input type="number" id="personas" name="personas" min="1" max="20" value="2">
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>¿Qué tipo de experiencia prefieres?</legend>
+          <div class="opciones">
+            <label><input type="radio" name="experiencia" value="naturaleza" checked> Naturaleza</label>
+            <label><input type="radio" name="experiencia" value="cultura"> Cultura</label>
+            <label><input type="radio" name="experiencia" value="gastronomia"> Gastronomía</label>
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <label for="destino">Destino que más te interesa</label>
+          <select id="destino" name="destino">
+            <option value="">Selecciona una opción</option>
+            <option value="cabo-gata">Cabo de Gata</option>
+            <option value="tabernas">Desierto de Tabernas</option>
+            <option value="mojacar">Mojácar</option>
+            <option value="velez">Los Vélez</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Comentarios</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos qué te gustaría visitar…"></textarea>
+        </div>
+
+        <label class="aceptacion">
+          <input type="checkbox" name="privacidad" required>
+          <span>Acepto la <a href="#privacidad">política de privacidad</a>.</span>
+        </label>
+
+        <button class="boton boton-principal" type="submit">Enviar consulta</button>
+        <p class="mensaje-formulario" id="mensaje-formulario" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="seccion preguntas" aria-labelledby="titulo-preguntas">
+      <div class="encabezado-seccion">
+        <p class="etiqueta">Información útil</p>
+        <h2 id="titulo-preguntas">Preguntas frecuentes</h2>
+      </div>
+      <details>
+        <summary>¿Es necesario disponer de coche?</summary>
+        <p>Es recomendable para llegar con flexibilidad a calas, miradores y pequeños municipios.</p>
+      </details>
+      <details>
+        <summary>¿Se puede realizar la ruta con niños?</summary>
+        <p>Sí. Conviene adaptar la duración de los paseos, evitar las horas de más calor y llevar suficiente agua.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer id="privacidad">
+    <div>
+      <a class="marca" href="#inicio"><span aria-hidden="true">☀</span> Descubre Almería</a>
+      <p>Ejemplo educativo realizado con HTML5 y CSS3.</p>
+    </div>
+    <nav aria-label="Enlaces del pie de página">
+      <a href="#inicio">Inicio</a>
+      <a href="#destinos">Destinos</a>
+      <a href="mailto:info@ejemplo.com">Contacto</a>
+    </nav>
+    <small>&copy; 2026 Descubre Almería</small>
+  </footer>
+
+  <script>
+    const formulario = document.querySelector('#formulario-viaje');
+    const mensaje = document.querySelector('#mensaje-formulario');
+
+    formulario.addEventListener('submit', (evento) => {
+      evento.preventDefault();
+      const nombre = document.querySelector('#nombre').value.trim();
+      mensaje.textContent = `¡Gracias, ${nombre}! Tu consulta se ha registrado correctamente.`;
+      formulario.reset();
+    });
+  </script>
+</body>
+</html>

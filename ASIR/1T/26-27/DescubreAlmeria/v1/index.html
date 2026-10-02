@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página sencilla para aprender los principales elementos de HTML5.">
+    <title>Descubre Almería con HTML5</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c4a6e'/%3E%3Cpath d='M8 45 24 21l10 14 7-9 15 19Z' fill='%237dd3fc'/%3E%3Ccircle cx='47' cy='16' r='7' fill='%23fbbf24'/%3E%3C/svg%3E">
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h1>Descubre Almería</h1>
+            <p>Una página sencilla para practicar los principales elementos de HTML5.</p>
+
+            <nav aria-label="Navegación principal">
+                <a href="#introduccion">Introducción</a>
+                <a href="#lugares">Lugares</a>
+                <a href="#tabla">Información</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section id="introduccion">
+            <h2>Una provincia llena de contrastes</h2>
+
+            <p>
+                Almería combina playas, zonas desérticas, pueblos blancos y espacios
+                naturales. En pocos kilómetros podemos pasar del mar Mediterráneo al
+                desierto de Tabernas.
+            </p>
+
+            <p>
+                En esta página veremos información sobre algunos lugares destacados.
+                Puedes consultar también la
+                <a href="https://www.turismodealmeria.org/" target="_blank" rel="noopener noreferrer">
+                    web de turismo de Almería
+                </a>.
+            </p>
+
+            <figure>
+                <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
+                    alt="Paisaje natural entre montañas al atardecer"
+                    width="1000"
+                    height="667">
+                <figcaption>Los paisajes naturales son uno de los atractivos de la provincia.</figcaption>
+            </figure>
+        </section>
+
+        <section id="lugares">
+            <h2>Lugares recomendados</h2>
+
+            <article>
+                <h3>Parque Natural de Cabo de Gata</h3>
+                <p>
+                    Es un espacio protegido de origen volcánico que destaca por sus
+                    playas, calas y rutas de senderismo.
+                </p>
+
+                <h4>Qué podemos hacer</h4>
+                <ul>
+                    <li>Visitar sus playas y miradores.</li>
+                    <li>Recorrer senderos junto a la costa.</li>
+                    <li>Conocer pueblos como San José o la Isleta del Moro.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Desierto de Tabernas</h3>
+                <p>
+                    Es uno de los paisajes más singulares de Europa y ha servido como
+                    escenario para numerosas películas.
+                </p>
+
+                <h4>Orden recomendado para la visita</h4>
+                <ol>
+                    <li>Consultar la previsión meteorológica.</li>
+                    <li>Preparar agua y protección solar.</li>
+                    <li>Elegir una ruta adaptada al grupo.</li>
+                    <li>Realizar la visita evitando las horas de más calor.</li>
+                </ol>
+            </article>
+
+            <aside class="aviso">
+                <h3>Consejo para el visitante</h3>
+                <p>
+                    Debemos respetar los espacios naturales, utilizar los senderos
+                    señalizados y recoger todos nuestros residuos.
+                </p>
+            </aside>
+        </section>
+
+        <section id="tabla">
+            <h2>Comparativa de lugares</h2>
+
+            <p>La siguiente tabla resume las características de varios destinos.</p>
+
+            <div class="tabla-responsive">
+                <table>
+                    <caption>Destinos turísticos de Almería</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Lugar</th>
+                            <th scope="col">Tipo de visita</th>
+                            <th scope="col">Duración</th>
+                            <th scope="col">Época recomendada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Cabo de Gata</th>
+                            <td>Playa y naturaleza</td>
+                            <td>Un día</td>
+                            <td>Primavera y otoño</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tabernas</th>
+                            <td>Desierto y senderismo</td>
+                            <td>Medio día</td>
+                            <td>Otoño e invierno</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mojácar</th>
+                            <td>Cultura y costa</td>
+                            <td>Un día</td>
+                            <td>Todo el año</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Vocabulario básico</h2>
+
+            <dl>
+                <dt>Sendero</dt>
+                <dd>Camino estrecho utilizado para caminar por el campo.</dd>
+
+                <dt>Mirador</dt>
+                <dd>Lugar elevado desde el que se puede contemplar el paisaje.</dd>
+
+                <dt>Espacio protegido</dt>
+                <dd>Zona natural que dispone de medidas especiales de conservación.</dd>
+            </dl>
+        </section>
+
+        <section id="contacto">
+            <h2>Solicita información</h2>
+            <p>Completa este formulario si deseas recibir información sobre la provincia.</p>
+            <form action="#" method="post">
+                <p>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </p>
+                <p>
+                    <label for="correo">Correo electrónico:</label><br>
+                    <input type="email" id="correo" name="correo" required>
+                </p>
+                <p>
+                    <label for="destino">Destino preferido:</label><br>
+                    <select id="destino" name="destino">
+                        <option value="cabo-gata">Cabo de Gata</option>
+                        <option value="tabernas">Desierto de Tabernas</option>
+                        <option value="mojacar">Mojácar</option>
+                    </select>
+                </p>
+                <fieldset>
+                    <legend>Tipo de actividad</legend>
+
+                    <label>
+                        <input type="radio" name="actividad" value="playa" checked>
+                        Playa
+                    </label>
+
+                    <label>
+                        <input type="radio" name="actividad" value="senderismo">
+                        Senderismo
+                    </label>
+
+                    <label>
+                        <input type="radio" name="actividad" value="cultura">
+                        Cultura
+                    </label>
+                </fieldset>
+                <p>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="condiciones" required>
+                        Acepto las condiciones de uso.
+                    </label>
+                </p>
+                <button type="submit">Enviar formulario</button>
+                <button type="reset">Borrar datos</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p>&copy; 2026 Descubre Almería</p>
+            <p><a href="#">Volver al principio</a></p>
+        </div>
+    </footer>
+</body>
+</html>

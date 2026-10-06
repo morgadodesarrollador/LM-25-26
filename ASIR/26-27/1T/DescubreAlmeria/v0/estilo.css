@@ -16,8 +16,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.contenedor {
+/* full width  100% 
+    contenedor 80% */
+.contenedor { 
     width: 80%;
     margin: 0 auto;
 }
@@ -62,4 +63,30 @@ main section{
     border: 1px solid grey;
     height: 400px;
     background-color: white;
+    padding: 20px;
+}
+
+main section h2 {
+    font-size: 25px;
+    color: red;
+
+}
+
+main section p {
+    font-size: 16px;
+    font-family: Helvetica;
+    font-style: normal;
+    text-align: justify;
+    line-height: 1.5;
+    color: black;
+    background-color: lightyellow;
+    padding: 10px;
+    text-indent: 1cm;
+}
+
+main section#lugares h2 {
+    text-align: right;
+    border-right: 2px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px;
 }

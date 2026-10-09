@@ -61,7 +61,12 @@ main {
 main section{
     margin-top: 10px;
     border: 1px solid grey;
-    height: 400px;
+    /* 
+        - altura fija
+        - altura como suma de las alturas de los elementos hijos
+    */
+    /* height: 400px; */
+    /* min-height: 900px; */
     background-color: white;
     padding: 20px;
 }
@@ -84,9 +89,31 @@ main section p {
     text-indent: 1cm;
 }
 
+/* main section#introduccion figure {}
+main section figure.tipos {}
+.tipos {} */
+main section figure {
+    border: 1px solid red;
+    display: flex; /* contenedor flexible */
+    flex-direction: row; /* el eje principal es horizontal */
+    flex-wrap: wrap; /* los elementos hijos se envuelven en varias filas */
+    justify-content:space-between; /* la alineacion de los hijos en el eje principal */
+    gap: 10px;
+    /* height: 600px; */
+
+}
+
+main section figure img {
+    
+    width: 25%; 
+}
+
+
+
 main section#lugares h2 {
     text-align: right;
     border-right: 2px solid black;
     border-bottom: 1px solid black;
     padding: 5px;
 }
+

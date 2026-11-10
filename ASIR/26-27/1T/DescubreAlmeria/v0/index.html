@@ -19,6 +19,87 @@
         </nav>
    </header>
    <main class="contenedor">
+       <section id="contacto">
+        <h2>Solicita  Información</h2>
+        <p>Completa este formulario para recibir info de la provincia </p>
+        <form action="#" method="post">
+            <fieldset id="datos">
+                <legend>Datos Personales</legend>
+                <div id="datos">
+                    <div id="nombre">
+                        <label>Introduce el Nombre</label>
+                        <input type="text" name="nombre" placeholder="ej: jose@gmail.com" required>
+                    </div>
+                    <div id="email">
+                        <label>Introduce el Correo</label>
+                        <input type="email" name="correo" value="ej: jose@gmail.com">
+                    </div>
+                    <div id="edad">
+                        <label>Edad</label>
+                        <input type="number" name="edad" min="18" max="60">
+                    </div>
+                    <div id="cantidad">
+                        <label>Edad</label>
+                        <input type="range" name="cantidad" min="1" max="1000">
+                    </div>
+                    
+                </div>
+            </fieldset>
+            <fieldset id="destino">
+                <legend>Datos del Destino</legend>
+                <div id="destino">
+                    <label>Selecciona el Destino</label>
+                    <select name="destino">
+                        <option value="c-gata">Cabo de Gata</option>
+                        <option value="d-tabernas">Desierto de Tabernas</option>
+                        <option value="moj">Mojácar</option>
+                        <option value="s-terreros">San Juan de los Terreros</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Tipo de Actividad</legend>
+                <div id="actividad">
+                    <div>
+                        <label>Playa</label>
+                        <input type="radio" name="actividad" value="playa">
+                    </div>
+                    <div>
+                        <label>Senderismo</label>
+                        <input type="radio" name="actividad" value="senderismo" checked>
+                    </div>
+                    <div>
+                        <label>Cultura</label>
+                        <input type="radio" name="actividad" value="cultura">
+                    </div>
+                    
+                </div>
+                <div id="Intereser">
+                    Selecciona tus intereses:
+
+                    <div>
+                        <label>Playa</label>
+                        <input type="checkbox" name="actividad[]" value="playa">
+                    </div>
+                    <div>
+                        <label>Senderismo</label>
+                        <input type="checkbox" name="actividad[]" value="senderismo" checked>
+                    </div>
+                    <div>
+                        <label>Cultura</label>
+                        <input type="checkbox" name="actividad[]" value="cultura">
+                    </div>
+                    
+                </div>
+            </fieldset>
+            <fieldset id="acciones">
+                <input type="submit">
+                <input type="reset">
+            </fieldset>
+            
+        </form>
+
+    </section>
     <section id="introduccion">
         <h2>Una Provincia llena de Contrastes</h2>
         <p>Almería combina playas, zonas desérticas, pueblos blancos y espacios naturales. En pocos kilómetros podemos pasar del mar Mediterráneo al desierto de Tabernas.</p>
@@ -144,57 +225,7 @@
 
     </section>
     
-    <section id="contacto">
-        <h2>Solicita  Información</h2>
-        <p>Completa este formulario para recibir info de la provincia </p>
-        <form action="#" method="post">
-            <fieldset id="datos">
-                <legend>Datos Personales</legend>
-                <div id="datos">
-                    <div id="nombre">
-                        <label>Introduce el Nombre</label>
-                        <input type="text" name="nombre">
-                    </div>
-                    <div id="email">
-                        <label>Introduce el Correo</label>
-                        <input type="email" name="correo">
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset id="destino">
-                <legend>Datos del Destino</legend>
-                <div id="destino">
-                    <label>Selecciona el Destino</label>
-                    <select name="destino">
-                        <option>Cabo de Gata</option>
-                        <option>Desierto de Tabernas</option>
-                        <option>Mojácar</option>
-                        <option>San Juan de los Terreros</option>
-                    </select>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Tipo de Actividad</legend>
-                <div id="actividad">
-                    <div>
-                        <label>Playa</label>
-                        <input type="radio" name="actividad" value="playa">
-                    </div>
-                    <div>
-                        <label>Senderismo</label>
-                        <input type="radio" name="actividad" value="senderismo" checked>
-                    </div>
-                    <div>
-                        <label>Cultura</label>
-                        <input type="radio" name="actividad" value="cultura">
-                    </div>
-                    
-                </div>
-            </fieldset>
-            
-        </form>
-
-    </section>
+ 
    </main>
    
    

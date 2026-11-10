@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aula Abierta · Inscripción</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+  <header>
+    <div><span aria-hidden="true">a.</span>Aula Abierta</div><span>Aprende · Crea · Conecta</span>
+  </header>
+  <main>
+    <aside>
+      <span>● &nbsp; Escuela de tecnología</span>
+      <h1>Tu próximo<br>paso empieza<br>aquí.</h1>
+      <p>Diseña tu experiencia de aprendizaje. Cuéntanos quién eres, qué te interesa y cómo quieres aprender.</p>
+      <ol>
+        <li><span>01</span>Tu perfil</li>
+        <li><span>02</span>Tu formación</li>
+        <li><span>03</span>A tu medida</li>
+      </ol>
+      <p>Ejemplo didáctico de formularios HTML5 con Flexbox. Puedes probar los campos: los datos no se envían ni se
+        guardan.</p>
+    </aside>
+    <!-- La demostración intercepta submit. En una aplicación real se necesita un servidor. -->
+    <form action="#" method="post" enctype="multipart/form-data">
+      <header><strong>Solicitud de inscripción</strong>
+        <p>* Campos obligatorios</p>
+      </header>
+      <!-- hidden viaja con el formulario aunque no se dibuja en pantalla. -->
+      <input type="hidden" name="origen" value="aula-abierta">
+      <fieldset>
+        <legend><span>01</span> Datos personales</legend>
+        <div>
+          <div><label for="nombre">Nombre completo * <span>text</span></label><input type="text" id="nombre"
+              name="nombre" autocomplete="name" placeholder="Ej.: Ana García López" minlength="3" maxlength="100"
+              required></div>
+          <div><label for="correo">Correo electrónico * <span>email</span></label><input type="email" id="correo"
+              name="correo" autocomplete="email" placeholder="ana@ejemplo.es" required></div>
+        </div>
+        <div>
+          <div><label for="telefono">Teléfono <span>tel</span></label><input type="tel" id="telefono" name="telefono"
+              autocomplete="tel" placeholder="+34 600 123 456" pattern="[+0-9 ()-]{9,20}"
+              aria-describedby="ayuda-tel"><small id="ayuda-tel">Entre 9 y 20 caracteres: números, +, espacios, () o
+              guiones.</small></div>
+          <div><label for="nacimiento">Fecha de nacimiento <span>date</span></label><input type="date" id="nacimiento"
+              name="nacimiento" autocomplete="bday"></div>
+        </div>
+        <div>
+          <div><label for="clave">Contraseña de acceso * <span>password</span></label><input type="password" id="clave"
+              name="clave" autocomplete="new-password" minlength="8" required aria-describedby="ayuda-clave"><small
+              id="ayuda-clave">Mínimo 8 caracteres. Para esta demo utiliza una contraseña ficticia.</small></div>
+          <div><label for="web">Portfolio o página personal <span>url</span></label><input type="url" id="web"
+              name="web" placeholder="https://tuportfolio.es" autocomplete="url"></div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span>02</span> Tu formación</legend>
+        <div>
+          <div><label for="busqueda">Busca un área <span>search + datalist</span></label><input type="search"
+              id="busqueda" name="area" list="areas" placeholder="Escribe o elige una sugerencia"><datalist id="areas">
+              <option value="Desarrollo web">
+              <option value="Sistemas y redes">
+              <option value="Ciberseguridad">
+              <option value="Diseño digital">
+            </datalist><small>Admite sugerencias y texto libre.</small></div>
+          <div><label for="curso">Curso * <span>select + optgroup</span></label><select id="curso" name="curso"
+              required>
+              <option value="">Selecciona un curso</option>
+              <optgroup label="Desarrollo">
+                <option value="html-css">HTML5 y CSS3</option>
+                <option value="javascript">JavaScript</option>
+              </optgroup>
+              <optgroup label="Sistemas">
+                <option value="linux">Administración Linux</option>
+                <option value="redes">Redes y servicios</option>
+              </optgroup>
+            </select></div>
+        </div>
+        <div>
+          <div><label for="plazas">Número de plazas * <span>number</span></label><input type="number" id="plazas"
+              name="plazas" min="1" max="5" step="1" value="1" required><small>Puedes solicitar entre 1 y 5
+              plazas.</small></div>
+          <div><label for="mes">Mes de inicio preferido <span>month</span></label><input type="month" id="mes"
+              name="mes"></div>
+        </div>
+        <div>
+          <div role="group" aria-labelledby="modalidad-titulo"><span id="modalidad-titulo">Modalidad *
+              <span>radio</span></span>
+            <div><label><input type="radio" name="modalidad" value="presencial" required>
+                Presencial</label><label><input type="radio" name="modalidad" value="online">
+                Online</label><label><input type="radio" name="modalidad" value="hibrida"> Híbrida</label></div>
+          </div>
+        </div>
+        <div>
+          <div role="group" aria-labelledby="intereses-titulo"><span id="intereses-titulo">Temas que te interesan
+              <span>checkbox</span></span>
+            <div><label><input type="checkbox" name="intereses" value="frontend"> Frontend</label><label><input
+                  type="checkbox" name="intereses" value="backend"> Backend</label><label><input type="checkbox"
+                  name="intereses" value="devops"> DevOps</label></div>
+          </div>
+        </div>
+        <div>
+          <div><label for="herramientas">Herramientas que utilizas <span>select multiple</span></label><select
+              id="herramientas" name="herramientas" multiple size="4" aria-describedby="ayuda-multiple">
+              <option value="vscode">Visual Studio Code</option>
+              <option value="git">Git</option>
+              <option value="docker">Docker</option>
+              <option value="figma">Figma</option>
+            </select><small id="ayuda-multiple">En ordenador: Ctrl o Cmd para seleccionar varias.</small></div>
+          <div><label for="nivel">Experiencia previa <span>range + output</span></label>
+            <div><input type="range" id="nivel" name="nivel" min="0" max="10" value="3"><output id="valor-nivel"
+                for="nivel">3 / 10</output></div><small>0 = empiezo de cero · 10 = nivel avanzado.</small><label
+              for="color">Color de tu acreditación <span>color</span></label><input type="color" id="color" name="color"
+              value="#14665e">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend><span>03</span> Disponibilidad y documentación</legend>
+        <div>
+          <div><label for="semana">Semana para la bienvenida <span>week</span></label><input type="week" id="semana"
+              name="semana"><small>El selector depende del navegador. Formato: 2026-W45.</small></div>
+          <div><label for="hora">Hora habitual disponible <span>time</span></label><input type="time" id="hora"
+              name="hora"></div>
+        </div>
+        <div>
+          <div><label for="tutoria">Fecha y hora de tutoría preferida <span>datetime-local</span></label><input
+              type="datetime-local" id="tutoria" name="tutoria"><small>Hora local; este campo no incluye zona
+              horaria.</small></div>
+        </div>
+        <div>
+          <div><label for="archivo">Currículum o presentación <span>file</span></label><input type="file" id="archivo"
+              name="archivo" accept=".pdf,.jpg,.jpeg,.png" aria-describedby="ayuda-archivo"><small
+              id="ayuda-archivo">PDF, JPG o PNG. En esta demo no se sube ningún archivo.</small></div>
+        </div>
+        <div>
+          <div><label for="objetivos">¿Qué te gustaría aprender? <span>textarea</span></label><textarea id="objetivos"
+              name="objetivos" maxlength="500"
+              placeholder="Cuéntanos tus objetivos, necesidades o preferencias…"></textarea></div>
+        </div>
+      </fieldset>
+      <section>
+        <label><input type="checkbox" name="aceptacion" required><span>Entiendo que es una demostración y que debo
+            utilizar datos ficticios. *</span></label>
+        <label><input type="checkbox" name="novedades"><span>Me gustaría recibir información sobre próximos cursos
+            (preferencia de ejemplo).</span></label>
+        <div><input type="submit" value="Simular inscripción →"><input type="reset" value="Restablecer"><input
+            type="button" value="Rellenar ejemplo"><button type="button" aria-controls="clave"
+            aria-pressed="false">Mostrar contraseña</button>
+          <!-- input image es otro botón de envío; alt proporciona su nombre accesible. -->
+          <input type="image" name="enviar_imagen" alt="Simular inscripción con botón de imagen"
+            title="Enviar mediante input image"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' rx='9' fill='%23edf5f2'/%3E%3Cpath d='M13 22h18m-7-7 7 7-7 7' fill='none' stroke='%2314665e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+        </div>
+        <p role="status" aria-live="polite"></p>
+      </section>
+      <details>
+        <summary>Ver los elementos HTML de este ejemplo</summary>
+        <p>Incluye los 22 tipos actuales de input: text, password, email, tel, url, search, number, range, date, month,
+          week, time, datetime-local, color, file, checkbox, radio, hidden, submit, reset, button e image.</p>
+        <p>También: form, label, fieldset, legend, select, optgroup, option, datalist, textarea, output y button. La
+          estructura visual utiliza display: flex, flex-wrap, gap, flex-direction, align-items y justify-content.</p>
+        <p>Validación nativa: required, minlength, maxlength, min, max, step y pattern. Un servidor real debe repetir
+          las validaciones; accept solo orienta la selección de archivos.</p>
+      </details>
+    </form>
+  </main>
+  <footer>Ejemplo didáctico · HTML5 + CSS Flexbox + JavaScript · Sin dependencias externas</footer>
+  <script>
+    // JavaScript solo para las interacciones; la maquetación está en CSS.
+    const form = document.querySelector('form');
+    const nivel = document.querySelector('#nivel');
+    const valor = document.querySelector('#valor-nivel');
+    const estado = document.querySelector('form section p');
+    const clave = document.querySelector('#clave');
+    const toggle = document.querySelector('form button');
+    function actualizarNivel() { valor.value = `${nivel.value} / 10`; }
+    nivel.addEventListener('input', actualizarNivel);
+    toggle.addEventListener('click', () => {
+      const mostrar = clave.type === 'password';
+      clave.type = mostrar ? 'text' : 'password';
+      toggle.textContent = mostrar ? 'Ocultar contraseña' : 'Mostrar contraseña';
+      toggle.setAttribute('aria-pressed', String(mostrar));
+    });
+    form.addEventListener('submit', (evento) => {
+      evento.preventDefault(); // El navegador ya ha comprobado la validez nativa.
+      estado.textContent = '¡Formulario válido! Simulación completada. No se han enviado ni guardado tus datos.';
+    });
+    form.addEventListener('reset', () => {
+      estado.textContent = '';
+      clave.type = 'password';
+      toggle.textContent = 'Mostrar contraseña';
+      toggle.setAttribute('aria-pressed', 'false');
+      setTimeout(actualizarNivel, 0); // Esperar al restablecimiento nativo.
+    });
+    document.querySelector('form input[type=button]').addEventListener('click', () => {
+      form.reset();
+      form.elements.nombre.value = 'Ana García López';
+      form.elements.correo.value = 'ana@example.com';
+      form.elements.telefono.value = '+34 600 123 456';
+      form.elements.clave.value = 'Ejemplo123';
+      form.elements.curso.value = 'html-css';
+      form.elements.modalidad.value = 'online';
+      form.elements.aceptacion.checked = true;
+      estado.textContent = 'Datos ficticios cargados. Puedes modificarlos y simular la inscripción.';
+    });
+  </script>
+</body>
+
+</html>

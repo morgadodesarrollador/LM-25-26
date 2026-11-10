@@ -250,5 +250,16 @@ main section#contacto form fieldset div#actividad div {
     align-items: center;
 }
 
+main section#contacto fieldset#acciones {
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    gap: 10px
+}
+main section#contacto fieldset#acciones input {
+    padding: 5px;
+}
+
+
 
 

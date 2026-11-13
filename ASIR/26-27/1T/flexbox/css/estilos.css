@@ -65,7 +65,11 @@ header nav a i {
 /* header nav a i:hover {
     color: blue;
 } */
-
+header nav a:hover i {
+    color: blue;
+    order: 2;
+}
+/* 
 header nav a:hover i {
     color: blue;
     order: 2;
@@ -74,7 +78,7 @@ header nav a:hover i {
 header nav a:hover span {
     color: green;
     order: 1;
-}
+} */
 
 main {
     background-color: #f2f2f2;

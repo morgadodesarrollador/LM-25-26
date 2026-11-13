@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header nav{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+header nav#sociales {
+    flex-basis: 100%;
+    order: 2;;
+}
+
+header nav#contacto {
+    display: none;
+    order:1;
+}
+header figure {
+    border: 1px solid black;
+    padding: 10px;
+    flex-basis: 10%;
+    order: 3;
+}
+header h1 {
+    border: 1px solid black;
+    padding: 10px;
+    flex-basis: 80%;
+    order:4;
+}
+header i {
+    border: 1px solid black;
+    padding: 10px;
+    flex-basis: 10%;
+    order:5;
+}
+header nav#secciones {
+    border: 1px solid black;
+    padding: 10px;
+    flex-basis: 100%;
+    order:6;
+}
